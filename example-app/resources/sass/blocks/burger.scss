@@ -1,0 +1,47 @@
+.burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+    padding: 0;
+
+    &-menu-off {
+        .burger__icon-burger {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .burger__icon-close {
+            display: none;
+        }
+    }
+
+    &-menu-on {
+        .burger__icon-close {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                fill: $burger-white;
+            }
+        }
+
+        .burger__icon-burger {
+            display: none;
+        }
+    }
+
+    &__element {
+        width: 40px;
+        height: 4px;
+        background: $burger-white;
+    }
+
+    @media (min-width: $tablet) {
+        display: none;
+    }
+}

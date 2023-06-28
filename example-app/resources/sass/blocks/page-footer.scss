@@ -1,0 +1,36 @@
+.page-footer {
+    padding: 48px 50px 105px;
+    background: $basic-color;
+    color: $burger-white;
+    display: flex;
+    flex-direction: column;
+
+    &__logo-link {
+        display: flex;
+        align-items: center;
+        margin-bottom: 31px;
+    }
+
+    &__text {
+        font-family: $site-fonts-special;
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 60px;
+    }
+
+    &__link {
+        display: block;
+        width: fit-content;
+        font-family: $site-fonts-text;
+        font-size: 18px;
+        line-height: 18px;
+        border-bottom: 1px solid $burger-white;
+        color: $burger-white;
+        text-decoration: none;
+        margin-bottom: 22px;
+    }
+
+    &__copyright {
+        font-size: 18px;
+    }
+}

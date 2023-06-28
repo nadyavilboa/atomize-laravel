@@ -1,0 +1,79 @@
+.description {
+    padding: 84px 0 79px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 36px;
+        line-height: 120%;
+        text-align: center;
+        margin-bottom: 13px;
+    }
+
+    &__logo {
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        font-family: $site-fonts-text;
+        font-size: 20px;
+        line-height: 34px;
+        text-align: center;
+        padding: 0 10px;
+        margin-bottom: 50px;
+    }
+}
+
+.description__images-group {
+    position: relative;
+    padding: 0 40px;
+    width: 100%;
+    height: auto;
+    min-height: 153px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet) {
+        margin-bottom: 120px;
+    }
+}
+
+.description__images-group .img-chip,
+.description__images-group .img-letter,
+.description__images-group .img-cristall {
+    position: absolute;
+}
+
+.description__images-group .img-chip {
+    z-index: 0;
+
+    @media (min-width: $tablet) {
+        width: 600px;
+        height: auto;
+    }
+}
+
+.description__images-group .img-letter {
+    z-index: 5;
+    top: calc(50% - 50px);
+
+    @media (min-width: $tablet) {
+        top: calc(70% - 50px);
+        width: 400px;
+        height: auto;
+    }
+}
+
+.description__images-group .img-cristall {
+    z-index: 10;
+    left: calc(50% - 120px);
+    top: calc(50% - 120px);
+
+    @media (min-width: $tablet) {
+        top: calc(70% - 120px);
+        transform: scale(1.5);
+    }
+}

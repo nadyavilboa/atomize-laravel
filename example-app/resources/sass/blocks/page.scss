@@ -1,0 +1,16 @@
+body {
+    font-family: $site-fonts-text;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.page__body {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+    min-height: 100%;
+    margin: 0;
+    counter-reset: section;
+    overflow-y: visible;
+  }

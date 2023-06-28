@@ -2061,6 +2061,52 @@ module.exports = {
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+var header = document.querySelector('.page-header');
+var burger = header.querySelector('.burger');
+var menu = header.querySelector('.site-navigation');
+var btnLang = menu.querySelectorAll('.site-navigation__lang-btn');
+var otherLink = menu.querySelector('.other-block__link');
+var dropDownBlock = menu.querySelector('.other-block__dropdown');
+var arrowDown = document.querySelector('.banner__btn-arrow');
+var FULL_HEIGHT_PAGE = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight);
+var scrolledFlag = false;
+var toggleMenu = function toggleMenu() {
+  burger.classList.toggle('burger-menu-off');
+  burger.classList.toggle('burger-menu-on');
+  menu.classList.toggle('site-navigation--off');
+  menu.classList.toggle('site-navigation--on');
+  menu.classList.contains('site-navigation--on') ? header.classList.add('page-header--dark') : header.classList.remove('page-header--dark');
+  scrolledFlag ? header.classList.add('page-header--dark') : '';
+};
+var toggleLang = function toggleLang(element) {
+  var activeBtn = element.closest('.site-navigation__lang-btn');
+  btnLang.forEach(function (btn) {
+    return btn.classList.remove('site-navigation__lang-btn--active');
+  });
+  activeBtn.classList.add('site-navigation__lang-btn--active');
+};
+var changeHeaderColor = function changeHeaderColor() {
+  var SCROLLED = window.scrollY || document.documentElement.scrollTop;
+  SCROLLED > header.offsetHeight ? header.classList.add('page-header--dark') : header.classList.remove('page-header--dark');
+  scrolledFlag = SCROLLED > header.offsetHeight;
+};
+var scrollDown = function scrollDown() {
+  window.scrollTo(0, FULL_HEIGHT_PAGE);
+};
+burger.addEventListener('click', toggleMenu);
+btnLang.forEach(function (btn) {
+  return btn.addEventListener('click', function (evt) {
+    return toggleLang(evt.target);
+  });
+});
+window.addEventListener('scroll', function () {
+  return changeHeaderColor();
+});
+changeHeaderColor();
+otherLink.addEventListener('click', function () {
+  return dropDownBlock.classList.toggle('other-block__dropdown--open');
+});
+arrowDown.addEventListener('click', scrollDown);
 
 /***/ }),
 

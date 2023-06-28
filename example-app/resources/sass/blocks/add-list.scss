@@ -1,0 +1,36 @@
+.add-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 60px;
+
+    &__item {
+        font-size: 24px;
+        line-height: 110%;
+        padding: 32px 10px;
+        border-radius: 19px;
+        border: 1px solid $basic-color;
+        width: 100%;
+        max-height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (min-width: $tablet) {
+    .add-list {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        &__item {
+            width: 45%;
+        }
+    }
+}
