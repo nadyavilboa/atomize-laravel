@@ -1042,7 +1042,7 @@ body {
     color: #FFF;
     text-align: center;
     padding: 4px 8px;
-    margin-top: 10px;
+    margin: 10px auto 0 auto;
   }
   .contacts-form__btn:hover {
     background: #C4C4C4;
