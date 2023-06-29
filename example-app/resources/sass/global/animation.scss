@@ -11,3 +11,27 @@
         bottom: 60px;
     }
 }
+
+@keyframes cristall {
+    0% {
+        transform: rotate(0) scale(1);
+    }
+
+    50% {
+        transform: rotate(45deg) scale(1.5);
+    }
+
+    100% {
+        transform: rotate(0) scale(1);
+    }
+}
+
+@keyframes links {
+    0% {
+        width: 1px;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

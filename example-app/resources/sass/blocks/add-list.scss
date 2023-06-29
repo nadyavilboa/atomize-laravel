@@ -34,3 +34,54 @@
         }
     }
 }
+
+@media (min-width: $desktop) {
+    .add-list {
+        display: block;
+        padding: 80px 100px;
+        width: 100%;
+
+        &__item {
+            width: auto;
+            padding: 32px 26px;
+            position: absolute;
+            width: 20%;
+            max-width: 260px;
+        }
+
+        &__item--one {
+            top: 2%;
+            left: 15%;
+        }
+
+        &__item--two {
+            top: 28.5%;
+            left: 10%;
+        }
+
+        &__item--three {
+            top: 55%;
+            left: 15%;
+        }
+
+        &__item--four {
+            bottom: -2%;
+            left: 36%;
+        }
+
+        &__item--five {
+            right: 15%;
+            top: -5%;
+        }
+
+        &__item--six {
+            right: 9%;
+            top: 22%;
+        }
+
+        &__item--seven {
+            right: 20%;
+            top: 65%;
+        }
+    }
+}

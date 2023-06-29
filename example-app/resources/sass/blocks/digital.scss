@@ -1,0 +1,215 @@
+.digital {
+    display: none;
+    background: url('../../img/bg-3.png') no-repeat -10% 0;
+    background-size: 64%;
+
+    &-world,
+    &-economics {
+        padding: 40px 100px 80px 100px;
+    }
+
+    &-economics {
+        background: $basic-white;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 48px;
+        line-height: 110%;
+        text-align: center;
+        max-width: 732px;
+        margin: 0 auto 40px auto;
+
+        &--economics {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+
+        &--bottom {
+            gap: 80px;
+        }
+    }
+
+    &-world__img {
+        padding: 26px 0;
+        border-top: 2px solid $basic-color;
+        border-bottom: 2px solid $basic-color;
+        min-width: 300px;
+    }
+
+    &__text {
+        font-family: $site-fonts-text;
+        font-size: 20px;
+        line-height: 34px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    &__text-item {
+        margin: 0;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 432px;
+    }
+
+    &__column-header {
+        padding: 166px 14px 44px;
+        text-transform: uppercase;
+        font-size: 48px;
+        line-height: 110%;
+        color: $full-white;
+        position: relative;
+        margin-bottom: 56px;
+        text-align: center;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            display: block;
+            height: 2px;
+            background-color: $basic-color;
+        }
+
+        &::before {
+            top: -28px;
+        }
+
+        &::after {
+            bottom: -28px;
+        }
+
+        &--left {
+            background: url('../../img/digital-bg-2.png') no-repeat;
+            background-size: cover;
+        }
+
+        &--right {
+            background: url('../../img/digital-bg-3.png') no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &__column-text {
+        font-family: $site-fonts-text;
+        font-size: 20px;
+        line-height: 34px;
+        margin-bottom: 28px;
+    }
+
+    &__link {
+        border-radius: 4px;
+        border: 2px solid $basic-color;
+        background: $basic-color;
+        color: $full-white;
+        padding: 8px;
+        width: 50%;
+        max-width: 280px;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 34px;
+        text-align: center;
+        text-decoration: none;
+        margin: 0 auto;
+        margin-top: auto;
+        z-index: 5;
+    }
+
+    &__link:hover {
+        background: $special-bg;
+        border: 2px solid $full-white;
+        transition: all 0.3s;
+    }
+
+    &__link:focus,
+    &__link:active {
+        background: $full-white;
+        color: $basic-color;
+        transition: all 0.3s;
+    }
+}
+
+@media (min-width: $desktop) {
+    .digital {
+        display: block;
+        position: relative;
+    }
+
+    .digital__image-group {
+        position: absolute;
+        left: calc(50% - 370px);
+        bottom: -6%;
+        z-index: 1;
+        width: 740px;
+        height: auto;
+    }
+
+    .digital__image-group .img-chip {
+        position: absolute;
+        bottom: 10%;
+        height: auto;
+    }
+    .digital__image-group .img-letter {
+        position: absolute;
+        bottom: 100px;
+        left: calc(50% - 210px);
+        height: auto;
+    }
+}
+
+@media (min-width: $desktop-full) {
+    .digital-world,
+    .digital-economics {
+        padding: 80px 200px;
+    }
+
+    .digital__title {
+        margin: 0 auto 80px auto;
+
+        &--economics {
+            margin: 0 auto 98px auto;
+        }
+    }
+
+    .digital__text {
+        max-width: 60%;
+    }
+
+    .digital__wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .digital__wrapper--bottom {
+        gap: 120px;
+    }
+
+    .digital-world__img,
+    .digital__img {
+        width: 100%;
+        height: auto;
+    }
+
+    .digital__column {
+        width: 50%;
+        max-width: none;
+    }
+
+    .digital__column-header {
+        min-height: 370px;
+    }
+}

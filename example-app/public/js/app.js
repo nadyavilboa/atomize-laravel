@@ -2068,6 +2068,7 @@ var btnLang = menu.querySelectorAll('.site-navigation__lang-btn');
 var otherLink = menu.querySelector('.other-block__link');
 var dropDownBlock = menu.querySelector('.other-block__dropdown');
 var arrowDown = document.querySelector('.banner__btn-arrow');
+var btnForm = document.querySelector('.contacts-form__btn');
 var FULL_HEIGHT_PAGE = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight);
 var scrolledFlag = false;
 var toggleMenu = function toggleMenu() {
@@ -2107,6 +2108,9 @@ otherLink.addEventListener('click', function () {
   return dropDownBlock.classList.toggle('other-block__dropdown--open');
 });
 arrowDown.addEventListener('click', scrollDown);
+btnForm.addEventListener('click', function (evt) {
+  return evt.preventDefault();
+});
 
 /***/ }),
 

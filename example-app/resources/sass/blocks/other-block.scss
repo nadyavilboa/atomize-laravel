@@ -27,7 +27,7 @@
         &__dropdown--open {
             display: flex;
             align-items: center;
-            background: $burger-white;
+            background: $full-white;
         }
 
         &__link-dropdown {
@@ -37,5 +37,12 @@
             display: flex;
             width: 100%;
         }
+    }
+}
+
+@media (min-width: $desktop) {
+    .other-block__link,
+    .other-block__dropdown {
+        display: none;
     }
 }

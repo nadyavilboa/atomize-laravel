@@ -19,6 +19,7 @@
 .site-navigation__lang {
     order: 1;
     display: flex;
+    gap: 13px;
 
     @media (min-width: $tablet) {
         order: 2;
@@ -49,14 +50,24 @@
         padding: 7px 14px;
         font-size: 14px;
         line-height: 22px;
-        color: $burger-white;
+        color: $full-white;
         text-transform: uppercase;
         border-top: 2px solid transparent;
         border-bottom: 2px solid transparent;
 
         &--active {
-            border-top: 2px solid $burger-white;
-            border-bottom: 2px solid $burger-white;
+            border-top: 2px solid $full-white;
+            border-bottom: 2px solid $full-white;
+        }
+
+        &:hover {
+            border-bottom: 2px solid $full-white;
+        }
+
+        &:focus,
+        &:active {
+            border-top: 2px solid $full-white;
+            border-bottom: 2px solid $full-white;
         }
     }
 

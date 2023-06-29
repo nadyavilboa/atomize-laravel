@@ -7,6 +7,7 @@ const btnLang = menu.querySelectorAll('.site-navigation__lang-btn');
 const otherLink = menu.querySelector('.other-block__link');
 const dropDownBlock = menu.querySelector('.other-block__dropdown');
 const arrowDown = document.querySelector('.banner__btn-arrow');
+const btnForm = document.querySelector('.contacts-form__btn');
 
 const FULL_HEIGHT_PAGE = Math.max(
     document.body.scrollHeight, document.documentElement.scrollHeight,
@@ -59,3 +60,5 @@ changeHeaderColor();
 otherLink.addEventListener('click', () => dropDownBlock.classList.toggle('other-block__dropdown--open'));
 
 arrowDown.addEventListener('click', scrollDown);
+
+btnForm.addEventListener('click', (evt) => evt.preventDefault());

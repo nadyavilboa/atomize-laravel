@@ -40,4 +40,15 @@
     picture {
         height: 40px;
     }
+
+    @media (min-width: $desktop) {
+        margin-right: 20px;
+    }
+}
+
+
+@media (min-width: $desktop-full) {
+    .page-header {
+        padding: 30px 140px;
+    }
 }
