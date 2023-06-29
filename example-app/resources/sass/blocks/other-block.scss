@@ -1,0 +1,48 @@
+.other-block__link,
+.other-block__dropdown {
+    display: none;
+}
+
+@media (min-width: $tablet) {
+    .other-block {
+        position: relative;
+
+        &__link {
+            display: flex;
+            background: transparent;
+            border: none;
+        }
+
+        &__dropdown {
+            display: none;
+            position: absolute;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        &__dropdown--open {
+            display: flex;
+            align-items: center;
+            background: $full-white;
+        }
+
+        &__link-dropdown {
+            color: $basic-color;
+            text-decoration: none;
+            text-align: left;
+            display: flex;
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: $desktop) {
+    .other-block__link,
+    .other-block__dropdown {
+        display: none;
+    }
+}

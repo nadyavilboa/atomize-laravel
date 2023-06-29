@@ -1,0 +1,126 @@
+.description {
+    padding: 84px 0 79px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 36px;
+        line-height: 120%;
+        text-align: center;
+        margin-bottom: 13px;
+    }
+
+    &__logo {
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        font-family: $site-fonts-text;
+        font-size: 20px;
+        line-height: 34px;
+        text-align: center;
+        padding: 0 10px;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+}
+
+.description__images-group {
+    position: relative;
+    padding: 0 40px;
+    width: 100%;
+    height: auto;
+    min-height: 153px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet) {
+        margin-bottom: 120px;
+    }
+}
+
+.description__images-group .img-chip,
+.description__images-group .img-letter,
+.description__images-group .img-cristall {
+    position: absolute;
+}
+
+.description__images-group .img-chip {
+    z-index: 0;
+
+    @media (min-width: $tablet) {
+        width: 600px;
+        height: auto;
+    }
+
+    @media (min-width: $desktop) {
+        display: none;
+    }
+}
+
+.description__images-group .img-letter {
+    z-index: 5;
+    top: calc(50% - 50px);
+
+    @media (min-width: $tablet) {
+        top: calc(70% - 50px);
+        width: 400px;
+        height: auto;
+    }
+
+    @media (min-width: $desktop) {
+        display: none;
+    }
+}
+
+.description__images-group .img-cristall {
+    z-index: 10;
+    left: calc(50% - 120px);
+    top: calc(50% - 120px);
+
+    @media (min-width: $tablet) {
+        top: calc(70% - 120px);
+        transform: scale(1.5);
+    }
+}
+
+@media (min-width: $desktop) {
+    .description {
+        margin-bottom: 40px;
+    }
+
+    .description__title {
+        font-size: 48px;
+        line-height: 110%;
+        max-width: 732px;
+    }
+
+    .description__logo {
+        margin-bottom: 80px;
+    }
+
+    .description__text {
+        max-width: 760px;
+    }
+
+    .description__wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    .description__images-group .img-cristall {
+        width: 352px;
+        top: calc(100% - 176px);
+        left: calc(50% - 176px);
+        transform: scale(1);
+    }
+
+    .description__images-group .img-cristall:hover  {
+        animation: cristall;
+        animation-iteration-count: 2;
+        animation-duration: 1s;
+    }
+}

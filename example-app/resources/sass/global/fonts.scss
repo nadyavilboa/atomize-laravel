@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Flama Medium";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src:
+      url("../../fonts/flama-medium.woff2") format("woff2"),
+      url("../../fonts/flama-medium.woff") format("woff"),
+      url("../../fonts/flama-medium.ttf") format("ttf"),
+      url("../../fonts/flama-medium.woff") format("eot")
+}
+
+@font-face {
+    font-family: "Inter Regular";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src:
+      url("../../fonts/inter-regular.woff2") format("woff2"),
+      url("../../fonts/inter-regular.woff") format("woff"),
+      url("../../fonts/inter-regular.ttf") format("ttf"),
+      url("../../fonts/inter-regular.woff") format("eot")
+}
