@@ -26,8 +26,12 @@
     }
 
     &__wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         gap: 40px;
 
         &--bottom {
@@ -46,9 +50,16 @@
         font-family: $site-fonts-text;
         font-size: 20px;
         line-height: 34px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         gap: 20px;
     }
 
@@ -57,9 +68,16 @@
     }
 
     &__column {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         max-width: 432px;
     }
 
@@ -131,6 +149,8 @@
     &__link:hover {
         background: $special-bg;
         border: 2px solid $full-white;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
         transition: all 0.3s;
     }
 
@@ -138,6 +158,8 @@
     &__link:active {
         background: $full-white;
         color: $basic-color;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
         transition: all 0.3s;
     }
 }
@@ -191,7 +213,9 @@
     .digital__wrapper {
         max-width: 1100px;
         margin: 0 auto;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     .digital__wrapper--bottom {

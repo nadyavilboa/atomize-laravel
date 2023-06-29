@@ -2,12 +2,21 @@
     padding: 48px 50px 105px;
     background: $basic-color;
     color: $full-white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
     &__logo-link {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         margin-bottom: 31px;
     }
 
@@ -20,6 +29,8 @@
 
     &__link {
         display: block;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
         font-family: $site-fonts-text;
         font-size: 18px;
@@ -38,8 +49,13 @@
 @media (min-width: $desktop) {
     .page-footer {
         padding: 40px 100px;
-        flex-direction: row;
-        justify-content: space-between;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     .page-footer__info {

@@ -16,6 +16,7 @@ const FULL_HEIGHT_PAGE = Math.max(
 );
 
 let scrolledFlag = false;
+let menuOpen = false;
 
 const toggleMenu = () => {
     burger.classList.toggle('burger-menu-off');
@@ -25,6 +26,7 @@ const toggleMenu = () => {
     menu.classList.toggle('site-navigation--on');
 
     menu.classList.contains('site-navigation--on') ? header.classList.add('page-header--dark') : header.classList.remove('page-header--dark');
+    menuOpen = !menuOpen;
 
     scrolledFlag ? header.classList.add('page-header--dark') : '';
 
@@ -41,8 +43,10 @@ const toggleLang = (element) => {
 const changeHeaderColor = () => {
     const SCROLLED = window.scrollY || document.documentElement.scrollTop;
 
-    SCROLLED > header.offsetHeight ? header.classList.add('page-header--dark') : header.classList.remove('page-header--dark');
-    scrolledFlag = SCROLLED > header.offsetHeight;
+    if (!menuOpen) {
+        SCROLLED > header.offsetHeight ? header.classList.add('page-header--dark') : header.classList.remove('page-header--dark');
+        scrolledFlag = SCROLLED > header.offsetHeight;
+    }
 }
 
 const scrollDown = () => {

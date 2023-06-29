@@ -2071,12 +2071,14 @@ var arrowDown = document.querySelector('.banner__btn-arrow');
 var btnForm = document.querySelector('.contacts-form__btn');
 var FULL_HEIGHT_PAGE = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight);
 var scrolledFlag = false;
+var menuOpen = false;
 var toggleMenu = function toggleMenu() {
   burger.classList.toggle('burger-menu-off');
   burger.classList.toggle('burger-menu-on');
   menu.classList.toggle('site-navigation--off');
   menu.classList.toggle('site-navigation--on');
   menu.classList.contains('site-navigation--on') ? header.classList.add('page-header--dark') : header.classList.remove('page-header--dark');
+  menuOpen = !menuOpen;
   scrolledFlag ? header.classList.add('page-header--dark') : '';
 };
 var toggleLang = function toggleLang(element) {
@@ -2088,8 +2090,10 @@ var toggleLang = function toggleLang(element) {
 };
 var changeHeaderColor = function changeHeaderColor() {
   var SCROLLED = window.scrollY || document.documentElement.scrollTop;
-  SCROLLED > header.offsetHeight ? header.classList.add('page-header--dark') : header.classList.remove('page-header--dark');
-  scrolledFlag = SCROLLED > header.offsetHeight;
+  if (!menuOpen) {
+    SCROLLED > header.offsetHeight ? header.classList.add('page-header--dark') : header.classList.remove('page-header--dark');
+    scrolledFlag = SCROLLED > header.offsetHeight;
+  }
 };
 var scrollDown = function scrollDown() {
   window.scrollTo(0, FULL_HEIGHT_PAGE);

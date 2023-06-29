@@ -8,6 +8,8 @@
         position: relative;
 
         &__link {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             background: transparent;
             border: none;
@@ -16,17 +18,28 @@
         &__dropdown {
             display: none;
             position: absolute;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             gap: 10px;
             padding: 10px;
             border-radius: 10px;
         }
 
         &__dropdown--open {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             background: $full-white;
         }
 
@@ -34,6 +47,8 @@
             color: $basic-color;
             text-decoration: none;
             text-align: left;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             width: 100%;
         }

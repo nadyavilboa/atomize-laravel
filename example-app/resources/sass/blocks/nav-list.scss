@@ -1,10 +1,17 @@
 .nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 13px;
     list-style: none;
 
     &__link {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         padding: 14px 26px;
         text-align: center;
@@ -29,15 +36,25 @@
         &--support:hover {
             background: $full-white;
             color: $basic-color;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
         }
     }
 
     &--footer {
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: wrap;
-        column-gap: 20px;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-column-gap: 20px;
+           -moz-column-gap: 20px;
+                column-gap: 20px;
         padding: 0;
         margin: 0;
         margin-bottom: 63px;
@@ -54,13 +71,18 @@
 
 @media (min-width: $tablet) {
     .nav-list {
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
 
         &__link {
             display: none;
         }
 
         &__link--support {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
         }
     }
@@ -68,6 +90,8 @@
 
 @media (min-width: $desktop) {
     .nav-list__link {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         padding: 14px;
         position: relative;
@@ -84,7 +108,9 @@
     }
 
     .nav-list--footer {
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
     }
 
     .nav-list--footer .nav-list__item {

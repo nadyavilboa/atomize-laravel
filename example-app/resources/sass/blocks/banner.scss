@@ -41,9 +41,12 @@
     }
 
     &__btn-arrow:hover {
-        animation: arrowDown;
-        animation-iteration-count: 3;
-        animation-duration: 0.7s;
+        -webkit-animation: arrowDown;
+                animation: arrowDown;
+        -webkit-animation-iteration-count: 3;
+                animation-iteration-count: 3;
+        -webkit-animation-duration: 0.7s;
+                animation-duration: 0.7s;
     }
 }
 
@@ -53,14 +56,23 @@
             url('../../img/bg-4.png') no-repeat 65% 100%,
             url('../../img/bg-1-big.png') no-repeat;
         background-size: cover, cover;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .banner__logo {
         display: block;
         margin-bottom: 70px;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
         margin: 0 auto;
     }
@@ -76,5 +88,4 @@
         max-width: 365px;
         margin: 0 auto;
     }
-
 }
